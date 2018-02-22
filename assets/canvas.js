@@ -244,18 +244,7 @@ document.getElementById('box3').addEventListener('click', function (e) {
             }
         }
     };
-//DELETE OBJECT IN CANVAS BY USING THE DELETE KEY
-    document.onkeydown = function (e) {
-        var keyCode = e.keyCode;
-        var activeObject = canvas.getActiveObject()
-        if(keyCode == 46) {
-            if (activeObject) {
-                if (confirm('Are you sure?')) {
-                    canvas.remove(activeObject);
-                }
-            }
-        }
-    };
+
     //OUTPUTS JSON BLOB 
     document.getElementById('save').addEventListener('click', function (e) {
         var json = JSON.stringify(canvas);
